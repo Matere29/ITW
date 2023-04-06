@@ -11,10 +11,11 @@ const divider = '----------------------------------'
 // Only change below this line
 
 const owed = Math.abs(leoBalance) + Math.abs(sarahBalance) 
+//used Math.abs() function to convert a strings to  positive numbers
 console.log(owed)
-const leo = leoName + "" + leoSurname + "owed:R"+ Math.abs(leoBalance).toFixed(2) + "\n"
-const sarah = sarahName + "" + sarahSurname + "owed:R"+ Math.abs(sarahBalance).toFixed(2)+"\n"
+const leo = leoName+ " " +leoSurname.trim() +" "+"owed:R"+ ""+Math.abs(leoBalance).toFixed(2)+"\n"
+//I used to toFixed()method to round balance and total to decimal places
+const sarah = sarahName.trim()+ " " +sarahSurname + " "+"owed:R"+ ""+Math.abs(sarahBalance).toFixed(2)+"\n"
 const total = "Total amount owed: R" 
-const result = leo + sarah + divider + divider+"\n" + total + owed +"\n" + divider + divider ;
-Math.abs(result).toFixed(2)
+const result = leo + sarah + divider +"\n" + total + owed.toFixed(2) +"\n" + divider;
 console.log(result)
